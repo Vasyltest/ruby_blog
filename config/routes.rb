@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   
   root 'pages#index'
   get 'about', to: 'pages#about'
-  resources :articles
+  resources :articles do
+    resources :comment
+  end
 
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
