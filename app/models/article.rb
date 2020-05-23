@@ -3,5 +3,5 @@ class Article < ActiveRecord::Base
     validates :description, presence: true
     validates :user_id, presence: true
     belongs_to :user
-    has_many :comment, dependent: :delete_all
+    has_many :comments
 end

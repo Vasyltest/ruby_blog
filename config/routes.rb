@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   
   root 'pages#index'
   get 'about', to: 'pages#about'
+
   resources :articles do
-    resources :comment
+    resources :comments
   end
 
   get 'signup', to: 'users#new'
